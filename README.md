@@ -4,6 +4,8 @@
 
 The **Newrelic_Java_Agent** module installs and configures a basic Newrelic Java APM, running the agent as part of your java app is outside the scope of this module
 
+Currently this modue only supports the most basic configuration for the New Java APM, namely the license key and application name, over time more options will be added to make the APM agent more configurable via puppet
+
 ## Configuration
 
 `newrelic_java_agent::install_base:`
