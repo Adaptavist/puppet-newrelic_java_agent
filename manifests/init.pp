@@ -1,4 +1,6 @@
 class newrelic_java_agent (
+    $application_name,
+    $license_key,
     $install_base          = $newrelic_java_agent::params::install_base,
     $chown_install_dir     = $newrelic_java_agent::params::chown_install_dir,
     $config_file           = $newrelic_java_agent::params::config_file,
@@ -11,8 +13,6 @@ class newrelic_java_agent (
     $apm_zip_download_url  = $newrelic_java_agent::params::apm_zip_download_url,
     $apm_zip_file_location = $newrelic_java_agent::params::apm_zip_file_location,
     $run_before            = $newrelic_java_agent::params::run_before,
-    $application_name,
-    $license_key,
     ) inherits  newrelic_java_agent::params {
 
     # only support RedHat and Debian based systems
