@@ -13,6 +13,7 @@ class newrelic_java_agent (
     $apm_zip_download_url  = $newrelic_java_agent::params::apm_zip_download_url,
     $apm_zip_file_location = $newrelic_java_agent::params::apm_zip_file_location,
     $run_before            = $newrelic_java_agent::params::run_before,
+    $run_after             = $newrelic_java_agent::params::run_after,
     ) inherits  newrelic_java_agent::params {
 
     # only support RedHat and Debian based systems
@@ -23,6 +24,11 @@ class newrelic_java_agent (
     # if we must run before a specific object enforce that
     if ($run_before and $run_before != 'false' ) {
         Class['newrelic_java_agent'] -> $run_before
+    }
+
+    # if we must run after a specific object enforce that
+    if ($run_after and $run_after != 'false' ) {
+        $run_after -> Class['newrelic_java_agent']
     }
 
     # if there is a download link, attempt to download the agent

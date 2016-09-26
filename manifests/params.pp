@@ -11,4 +11,5 @@ class newrelic_java_agent::params {
     $apm_zip_download_url = undef
     $apm_zip_file_location = undef
     $run_before = undef
+    $run_after = undef
 }
