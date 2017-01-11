@@ -1,5 +1,5 @@
 name 'adaptavist-newrelic_java_agent'
-version '0.0.2'
+version '0.0.3'
 source 'https://github.com/Adaptavist/puppet-newrelic_java_agent.git'
 author 'adaptavist'
 summary 'Newrelic Java APM Module' 
