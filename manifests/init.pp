@@ -47,7 +47,7 @@ class newrelic_java_agent (
         exec { 'download_newrelic_apm':
             cwd     => $apm_download_location,
             command => "${download_command} ${apm_zip_download_url}",
-            unless  => ["test -f ${real_apm_zip_file_location}"],
+            unless  => "test -f ${real_apm_zip_file_location}",
             timeout => 3600,
             before  => Exec['unzip_newrelic_apm']
         }
